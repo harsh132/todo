@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link href="https://css.gg/css?=pen|check-r|add|edit-markup|close-r" rel="stylesheet" />
+		<title>ToDo App</title>
+	</head>
+	<body onload="getItems()">
+		<div class="container">
+			<h1>ToDo List</h1>
+			<form name="new" id="new">
+				<input type="text" name="todo" id="newTodo" placeholder="What to do next ..." />
+				<button type="submit">Add</button>
+			</form>
+			<br />
+			<hr />
+			<div class="list"></div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
