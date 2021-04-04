@@ -1,6 +1,6 @@
 const { MongoClient, ObjectID, Int32 } = require("mongodb");
 const express = require("express");
-const uri = "mongodb://127.0.0.1:27017/?readPreference=primary&gssapiServiceName=mongodb&ssl=false";
+const uri = "mongodb://127.0.0.1:27017";
 
 const app = express();
 app.use(express.static("public"));
@@ -16,7 +16,6 @@ app.post("/api/add", async (req, res) => {
 	} finally {
 		await client.close();
 	}
-	console.log(req.body.item);
 	res.send("done");
 });
 
@@ -41,7 +40,6 @@ app.post("/api/done", async (req, res) => {
 	} finally {
 		await client.close();
 	}
-	console.log(req.body.id);
 	res.send("done");
 });
 
@@ -54,7 +52,6 @@ app.post("/api/edit", async (req, res) => {
 	} finally {
 		await client.close();
 	}
-	console.log(req.body.id);
 	res.send("done");
 });
 
@@ -67,7 +64,6 @@ app.post("/api/delete", async (req, res) => {
 	} finally {
 		await client.close();
 	}
-	console.log(req.body.id);
 	res.send("done");
 });
 
